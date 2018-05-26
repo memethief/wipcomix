@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE comicstrip SYSTEM "http://fsckme.com/comic/DTD/comicstrip.dtd">
+<!--
+ Sample XML file for a plot of the programmatical comic.
+
+Here we lay out the characters used, the storyline and the layout.
+ -->
+<!--
+xmlns="http://fsckme.com/comic"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://fsckme.com/comic comicstrip.xsd"
+ -->
+<comicstrip>
+
+<striptitle>Comic XML test</striptitle>
+
+<paneltext xoffset="10" yoffset="10" xsize="270" ysize="20">Our heroes struggle to speak...</paneltext>
+<panel xoffset="0" yoffset="0" xsize="400" ysize="300">
+	<player name="Dave" xoffset="150" yoffset="100" mood="0" facing="1"/>
+	<player name="Jan" xoffset="250" yoffset="100" mood="3" facing="-1"/>
+	<paneltext xoffset="110" yoffset="200" xsize="70" ysize="20">Mmrph!</paneltext>
+	<paneltext xoffset="225" yoffset="200" xsize="60" ysize="20">Hmph!</paneltext>
+</panel>
+
+<paneltext xoffset="370" yoffset="270" xsize="250" ysize="20">...but find themselves mute.</paneltext>
+<panel xoffset="380" yoffset="10" xsize="250" ysize="300">
+	<player name="Jan" xoffset="150" yoffset="100" mood="3" facing="-1"/>
+	<paneltext xoffset="120" yoffset="210" xsize="85" ysize="20">Mrrmph?!</paneltext>
+</panel>
+
+<panel xoffset="10" yoffset="300" xsize="250" ysize="290">
+</panel>
+
+<playerdef id="Dave" source="local" href="dave.xml" />
+<playerdef id="Jan" source="local" href="jan.xml" />
+ 
+</comicstrip>

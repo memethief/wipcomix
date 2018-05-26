@@ -1,0 +1,8 @@
+/** Stylesheet for wipcomix */
+
+DIV.error {
+	border: 1px dashed #f88; 
+	background: #fee; 
+	color: #300;
+}
+	

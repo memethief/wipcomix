@@ -1,0 +1,28 @@
+<!ELEMENT comicstrip (striptitle,(panel|paneltext)+,playerdef*)>
+<!ELEMENT striptitle (#PCDATA)>
+
+<!ELEMENT panel (player|paneltext)*>
+<!ATTLIST panel xoffset CDATA "0">
+<!ATTLIST panel yoffset CDATA "0">
+<!ATTLIST panel xsize CDATA #IMPLIED>
+<!ATTLIST panel ysize CDATA #IMPLIED>
+
+<!ELEMENT paneltext (#PCDATA)>
+<!ATTLIST paneltext xoffset CDATA "0">
+<!ATTLIST paneltext yoffset CDATA "0">
+<!ATTLIST paneltext xsize CDATA #IMPLIED>
+<!ATTLIST paneltext ysize CDATA #IMPLIED>
+<!ATTLIST paneltext style CDATA "">
+
+<!ELEMENT player EMPTY>
+<!ATTLIST player name IDREF #REQUIRED>
+<!ATTLIST player xoffset CDATA "0">
+<!ATTLIST player yoffset CDATA "0">
+<!ATTLIST player mood CDATA #IMPLIED>
+<!ATTLIST player facing CDATA "0">
+
+<!ELEMENT playerdef EMPTY>
+<!ATTLIST playerdef id ID #REQUIRED>
+<!ATTLIST playerdef source (inline|local|remote) "inline">
+<!ATTLIST playerdef href CDATA #IMPLIED>
+

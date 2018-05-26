@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE comicstrip SYSTEM "http://fsckme.com/comic/DTD/character.dtd">
+<!--
+ Sample XML file for a character definition in wipcomix.
+ Here we define default properties for characters to be used in strips. These 
+ properties may be overwritten by individual strips or panels.
+ -->
+<!--
+xmlns="http://fsckme.com/comic"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://fsckme.com/comic character.xsd"
+ -->
+<character>
+
+<name>Dave</name>
+
+</character>
+
