@@ -3,9 +3,11 @@
 /**
  * Autoload any classes we need
  */
-function __autoload($class_name) {
+function my_autoload($class_name) {
 	require_once("classes/$class_name.php");
 }
+
+spl_autoload_register('my_autoload');
 
 $strip_source = isset($_REQUEST['f']) ? $_REQUEST['f'] : 'xml';
 $strip_number = isset($_REQUEST['s']) ? $_REQUEST['s'] : null;
@@ -144,7 +146,7 @@ function visible_diameter($wd, $dp, $theta) {
 
 /* debug stuff */
 function debug($message) {
-	if ($_REQUEST['debug']) echo($message);
+	if (isset($_REQUEST['debug'])) echo($message);
 }
 
 ?>

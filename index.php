@@ -1,7 +1,5 @@
 <?php echo '<?xml version="1.0" encoding="ISO-8859-1"?>'."\n"; ?>
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Programmatical comic test</title>
@@ -21,7 +19,7 @@ if (isset($_REQUEST['d'])) {
 	$request .= $joiner . "d=".$_REQUEST['d'];
 	$joiner = '&';
 }
-$comic_url = "comic.psvg$request";
+$comic_url = "comic.svg.php$request";
 require_once("comic.php");
 $strip_number = getStripNumber();
 echo "\n<!-- Strip number: $strip_number -->\n";

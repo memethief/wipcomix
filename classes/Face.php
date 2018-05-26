@@ -45,7 +45,7 @@ class Face {
 			$this->lefteye->draw($doc,$x,$y+5), 
 			$face,
 			$this->righteye->draw($doc,$x,$y) );
-		if ($orientation < 0) { 
+		if ($this->orientation < 0) { 
 			$faceelements = array_reverse($faceelements);
 		}
 		$node = $doc->createElement("g");
@@ -87,8 +87,8 @@ class Eye {
 
 	function draw($doc,$x,$y) {
 		$r = $this->radius;
-		$px = $this->pupiloffsetx;
-		$py = $this->pupiloffsety;
+		//$px = $this->pupiloffsetx;
+		//$py = $this->pupiloffsety;
 		$sx = $this->face->orientation;
 		// eye
 		$eye = $doc->createElement("circle");
@@ -158,7 +158,7 @@ class Pupil {
 }
 
 class Eyelids {
-	private $mood = MOOD_DEFAULT;
+	private $mood = Character::MOOD_DEFAULT;
 	private $eye;
 	private $character;
 

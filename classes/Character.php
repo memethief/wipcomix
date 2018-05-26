@@ -21,7 +21,7 @@ class Character {
 	public $face;
 	public $top;
 	public $left;
-	public $mood = MOOD_DEFAULT;
+	public $mood = Character::MOOD_DEFAULT;
 	public $orientation = 1;
 
 	/**

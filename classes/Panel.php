@@ -90,7 +90,7 @@ class Panel implements SVGObject {
 		// frame
 		$frame = clone $border;
 	        $frame->setAttribute('stroke','blue');
-	        $frame->setAttribute('stroke-width',$frame_width);
+	        $frame->setAttribute('stroke-width',$this->frame_width);
 		$frame->setAttribute("fill", "none");
 	        $node->appendChild($frame);
 		// return the whole thing

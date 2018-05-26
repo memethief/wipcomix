@@ -6,7 +6,7 @@
 class Strip implements SVGObject {
 	const SOURCE_XML = "xml";
 	const SOURCE_DB = "db";
-	const DEFAULT_SOURCE = SOURCE_XML;
+	const DEFAULT_SOURCE = Strip::SOURCE_XML;
 	public $id;
 	public $title;
 	public $date;
@@ -16,7 +16,7 @@ class Strip implements SVGObject {
 	public $frame_width=3;
 
 	public function __construct($dbObj=null) {
-		if ($dbobj != null) {
+		if ($dbObj != null) {
 			$this->id = $dbObj->strip_ID;
 			$this->title = $dbObj->strip_title;
 			$this->date = $dbObj->strip_date;
