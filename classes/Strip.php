@@ -34,9 +34,9 @@ class Strip implements SVGObject {
 	public static function fetch_by_id($id,$source=Strip::SOURCE_XML) {
 		try {
 			if ($source==Strip::SOURCE_XML)
-				return ComixXML::get()->fetch_strip_by_id($id);
+				return ComixXML::get()->fetch_strip($id);
 			else
-				return ComixDB::get()->fetch_strip_by_id($id);
+				return ComixDB::get()->fetch_strip($id);
 		} catch (Exception $e) {
 			return new SVGException($e);
 		}

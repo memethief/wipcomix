@@ -58,7 +58,7 @@ function ajax_edit_panel() {
 function ajax_get_panel_info() {
 	$panel_id = $_REQUEST['panel_ID'];
 	$strip_id = $_REQUEST['panel_strip'];
-	if ($panel_id) try { $panel = ComixDB::get()->fetch_panel_by_id($panel_id); } 
+	if ($panel_id) try { $panel = ComixDB::get()->fetch_panel($panel_id); } 
 	catch (Exception $e) { return ajax_error("Error in ajax_get_panel_info(): ".$e->getMessage()); } 
 	else if ($strip_id) { $panel->panel_strip = $strip_id; } 
 	else { return ajax_error("Error: no strip ID specified"); }
@@ -99,8 +99,11 @@ function ajax_get_panel_info() {
 /**
  * Autoload any classes we need
  */
-function __autoload($class_name) {
-        require_once("../classes/$class_name.php");
+function my_autoload($class_name) {
+    require_once("../classes/$class_name.php");
 }
+
+spl_autoload_register('my_autoload');
+
 
 ?>
