@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!DOCTYPE character SYSTEM "http://fsckme.com/wipcomix/DTD/character.dtd">
+<!DOCTYPE character SYSTEM "../DTD/character.dtd">
 <!--
  Sample XML file for a character definition in wipcomix.
  Here we define default properties for characters to be used in strips. These 
@@ -13,6 +13,7 @@ xsi:schemaLocation="http://fsckme.com/comic character.xsd"
 <character>
 
 <name>Dave</name>
+<facecolour>peachpuff</facecolour>
 
 </character>
 

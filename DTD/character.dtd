@@ -1,0 +1,8 @@
+<!ELEMENT character (name,defaultmood?,facecolour?,mood*)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT defaultmood (#PCDATA)>
+<!ELEMENT facecolour (#PCDATA)>
+
+<!ELEMENT mood (facecolour?)>
+<!ATTLIST mood number CDATA #IMPLIED>
+<!ATTLIST mood name CDATA #IMPLIED>

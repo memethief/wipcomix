@@ -8,6 +8,7 @@ elementFormDefault="qualified">
 <xs:element name="comicstrip">
 <xs:complexType><xs:sequence>
 	<xs:element name="striptitle" type="xs:string" default=""/>
+	<xs:element name="strippubdate" type="xs:date" default=""/>
 	<xs:element name="panel" type="panelType" 
 		minOccurs="1" maxOccurs="unbounded"/>
 </xs:sequence></xs:complexType>

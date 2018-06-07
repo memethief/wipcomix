@@ -2,7 +2,7 @@
 /**
  * class to describe the root of an SVG document
  */
-class SVGDocument extends DOMDocument implements SVGObject {
+class SVGDocument extends DOMDocument {
 	private $svgroot;
 
 	function __construct($text=null) {
@@ -15,12 +15,13 @@ class SVGDocument extends DOMDocument implements SVGObject {
 		$this->svgroot = $this->createElement('svg');
 		$this->svgroot->setAttribute('version', '1.1');
 		$this->svgroot->setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-		if ($text != null) {
+		if ($text) {
 			$this->appendChild($this->createComment($text));
 			$desc = $this->createElement("desc");
 			$desc->appendChild($this->createTextNode($text));
 			$this->svgroot->appendChild($desc);
 		}
+		$this->appendChild($this->svgroot);
 	}
 
 	function setDimensions($width, $height) {
@@ -30,11 +31,6 @@ class SVGDocument extends DOMDocument implements SVGObject {
 
 	function appendObject(SVGObject $node) {
 		$this->svgroot->appendChild($node->draw($this));
-	}
-
-	function draw(DOMDocument $doc) {
-		$this->appendChild($this->svgroot);
-		return $this->saveXML();
 	}
 }
 ?>

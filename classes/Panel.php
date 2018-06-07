@@ -42,7 +42,7 @@ class Panel implements SVGObject {
 	/**
 	 * return an SVG representation of this object.
 	 */
-	public function draw(DOMDocument $doc) {
+	public function draw(DOMDocument $doc) : DOMElement {
 		// Create group and establish coordinate system
 		$node = $doc->createElement('g');
 		$node->setAttribute("transform", "translate($this->left,$this->top)");

@@ -1,5 +1,6 @@
-<!ELEMENT comicstrip (striptitle,(panel|paneltext)+,playerdef*)>
+<!ELEMENT comicstrip (striptitle,strippubdate,(panel|paneltext)+,playerdef*)>
 <!ELEMENT striptitle (#PCDATA)>
+<!ELEMENT strippubdate (#PCDATA)>
 
 <!ELEMENT panel (player|paneltext)*>
 <!ATTLIST panel xoffset CDATA "0">

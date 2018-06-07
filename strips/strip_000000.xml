@@ -17,7 +17,7 @@ xsi:schemaLocation="http://fsckme.com/comic comicstrip.xsd"
 <paneltext xoffset="10" yoffset="10" xsize="270" ysize="20">Our heroes struggle to speak...</paneltext>
 <panel xoffset="0" yoffset="0" xsize="400" ysize="300">
 	<player name="Dave" xoffset="150" yoffset="100" mood="0" facing="1"/>
-	<player name="Jan" xoffset="250" yoffset="100" mood="3" facing="-1"/>
+	<player name="Jan" xoffset="250" yoffset="100" mood="1" facing="-1"/>
 	<paneltext xoffset="110" yoffset="200" xsize="70" ysize="20">Mmrph!</paneltext>
 	<paneltext xoffset="225" yoffset="200" xsize="60" ysize="20">Hmph!</paneltext>
 </panel>

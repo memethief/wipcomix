@@ -40,7 +40,7 @@ function drawStripNumber($strip_number = null)
     $doc = new SVGDocument(""); // "strip number ".$strip->getStripNumber().": '".$strip->getTitle()."'");
     $doc->setDimensions($strip->getWidth(), $strip->getHeight());
     $doc->appendObject($strip);
-    echo $doc->draw($doc);
+    echo $doc->saveXML();
 }
 
 function get_ComixFactory()
@@ -50,7 +50,6 @@ function get_ComixFactory()
         case 'xml':
             return new ComixXML();
         case 'db':
-            return new ComixDB();
         default:
             throw new Exception("Unknown comic source passed: [$source]");
     }
